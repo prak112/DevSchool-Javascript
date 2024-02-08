@@ -2,8 +2,9 @@
  - Learn Fundamentals of Javascript, Data structures, Algorithms, DOM
 
 # Sources
-- [freeCodeCamp](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/)
-- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [freeCodeCamp](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/) - Learning through building projects
+    - Project 1 - [Role Playing Game](fcc_role-playing-game)
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Documentation reference and Guidebook
 
 # Current Focus
 ```mermaid
