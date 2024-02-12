@@ -3,7 +3,7 @@ body{
     color: whitesmoke;
     text-align: center;
 }
-#text {
+#text, #intro {
     background-color: #0a0a23;
     color: #ffffff;
     padding: 10px;
@@ -31,4 +31,16 @@ body{
 }
 .stat{
     padding-right: 50px;
+}
+#controls{
+    display: flex;
+    justify-content: space-around;
+}
+button{
+    cursor: pointer;
+    background-color: #feac32;
+    color: #0a0a23;
+    background-image: linear-gradient(#ffec64, #d04704);
+    border: 1px solid #feacfe;
+    padding: 10px;
 }
