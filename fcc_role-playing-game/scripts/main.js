@@ -63,7 +63,13 @@ const locations = [
         "button text": ["Attack", "Dodge", "Run"],
         "button functions": [attack, dodge, goTownSquare],
         text: "You are fighting a monster.",
-    }
+    },
+    {
+        name: "kill monster",
+        "button text": ["Go to TownSquare", "Go to TownSquare", "Go to TownSquare"],
+        "button functions": [goTownSquare, goTownSquare, goTownSquare],
+        text: 'The monster screams "Arg!" as it dies. You gain XP and find gold.',
+    },
 ]
 
 
@@ -75,6 +81,7 @@ button3.onclick = fightDragon;
 
 // functions for character movement
 function update(location) {
+    monsterStats.style.display = "none";
     button1.innerText = location["button text"][0];
     button2.innerText = location["button text"][1];
     button3.innerText = location["button text"][2];
@@ -166,12 +173,42 @@ function fightDragon() {
 
 function goFight() {
     update(locations[3]);
+    monsterHealth = monsters[fighting].health;
+    monsterStats.style.display = "block";   
+    monsterName.innerText = monsters[fighting].name;
+    monsterHealthText.innerText = monsterHealth;
 }
 
 function attack() {
-
+    text.innerText = "You attack " + monsters[fighting].name + " with your " + weapons[currentWeapon].name + " !";
+    text.innerText += "\nThe " + monsters[fighting].name + " attacks you with its fangs !"
+    health -= monsters[fighting].level;
+    monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 2;
+    healthText.innerText = health;
+    monsterHealthText.innerText = monsterHealth;
+    if (health <= 0){
+        loseBattle();
+    }
+    else if (monsterHealth <= 0){
+        winBattle();
+    }
 }
 
 function dodge() {
 
+}
+
+function loseBattle() {
+
+}
+
+function winBattle() {
+    rewardGold = Math.floor(monsters[fighting].level * 7.7);
+    gold += rewardGold;
+    rewardXp = monsters[fighting].level;
+    xp += rewardXp;
+    goldText.innerText = gold;
+    xpText.innerText = xp;
+    update(locations[4]);
+//    text.innerText = "You defeated the " + monsters[fighting].name + " and gained " + rewardGold + "gold" & + rewardXp + "XP !";
 }
