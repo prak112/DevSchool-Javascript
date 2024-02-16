@@ -70,6 +70,18 @@ const locations = [
         "button functions": [goTownSquare, goTownSquare, goTownSquare],
         text: 'The monster screams "Arg!" as it dies. You gain XP and find gold.',
     },
+    {
+        name: "dead",
+        "button text": ["RESPAWN ?", "REPLAY ?", "RESTART ?"],
+        "button functions": [restart, restart, restart],
+        text: "You are D-E-A-D!  &#x2620;",  // death emoticon
+    },
+    {
+        name: "kill boss",
+        "button text": ["RESPAWN ?", "REPLAY ?", "RESTART ?"],
+        "button functions": [restart, restart, restart],
+        text: "You DEFEATED the Mighty Dragon.. 0_O O_o o_o ... You won the RPG! &#x1F389;"
+    }
 ]
 
 
@@ -88,7 +100,7 @@ function update(location) {
     button1.onclick = location["button functions"][0];
     button2.onclick = location["button functions"][1];
     button3.onclick = location["button functions"][2];
-    text.innerText = location.text;
+    text.innerHTML = location.text;
     text.innerText += "\n\n Inventory : " + inventory;
 }
 
@@ -171,6 +183,9 @@ function fightDragon() {
     goFight();
 }
 
+// !! RANDOMIZE Combat Actions and Rewards !! //
+
+
 function goFight() {
     update(locations[3]);
     monsterHealth = monsters[fighting].health;
@@ -181,25 +196,30 @@ function goFight() {
 
 function attack() {
     text.innerText = "You attack " + monsters[fighting].name + " with your " + weapons[currentWeapon].name + " !";
-    text.innerText += "\nThe " + monsters[fighting].name + " attacks you with its fangs !"
+    text.innerText += "\nThe " + monsters[fighting].name + " attacks you with its might !"
     health -= monsters[fighting].level;
     monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 2;
     healthText.innerText = health;
     monsterHealthText.innerText = monsterHealth;
     if (health <= 0){
-        loseBattle();
+        playerDead();
     }
     else if (monsterHealth <= 0){
-        winBattle();
+        if(fighting === 2){
+            winGame();
+        }
+        else{
+            winBattle();
+        }
     }
 }
 
 function dodge() {
-
+    text.innerText = "You dodge the monster's attack like a ninja!";
 }
 
 function loseBattle() {
-
+    update(locations[5]);
 }
 
 function winBattle() {
@@ -211,4 +231,24 @@ function winBattle() {
     xpText.innerText = xp;
     update(locations[4]);
 //    text.innerText = "You defeated the " + monsters[fighting].name + " and gained " + rewardGold + "gold" & + rewardXp + "XP !";
+}
+
+function playerDead() {
+    update(locations[5]);
+}
+
+function winGame(){
+    update(locations[6]);
+}
+
+function restart() {
+    xp = 0;
+    gold = 50;
+    health = 100;
+    currentWeapon = 0;
+    inventory = ["stick",];
+    xpText.innerText = xp;
+    goldText.innerText = gold;
+    healthText.innerText = health;
+    goTownSquare();
 }
