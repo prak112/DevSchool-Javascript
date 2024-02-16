@@ -5,7 +5,7 @@
 - [freeCodeCamp](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/) - Learning through building projects
     - Project 1 - Text-based Role Playing Game
         - Check [Project dir](https://github.com/prak112/DevSchool-Javascript/tree/text-rpg)
-        - Play(https://prak112.github.io/DevSchool-Javascript/)
+        - [Play Text-based RPG](https://prak112.github.io/DevSchool-Javascript/)
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Documentation reference and Guidebook
 
 # Current Focus
