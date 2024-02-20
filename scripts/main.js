@@ -62,7 +62,7 @@ const locations = [
         name: "fight",
         "button text": ["Attack", "Dodge", "Run"],
         "button functions": [attack, dodge, goTownSquare],
-        text: "You are fighting a monster.",
+        text: "You are fighting a monster with your " + weapons[currentWeapon].name + " !",
     },
     {
         name: "kill monster",
@@ -81,6 +81,12 @@ const locations = [
         "button text": ["RESPAWN ?", "REPLAY ?", "RESTART ?"],
         "button functions": [restart, restart, restart],
         text: "You DEFEATED the Mighty Dragon.. 0_O O_o o_o ... You won the RPG! &#x1F389;"
+    },
+    {
+        name: "lottery",
+        "button text": ["Surprise!", "Surprise!", "Go to TownSquare"],
+        "button functions": [surpriseLottery, xpLottery, goTownSquare],
+        text: "You are chosen by ~~Mother Gaia~~ to be gifted!",
     }
 ]
 
@@ -101,7 +107,7 @@ function update(location) {
     button2.onclick = location["button functions"][1];
     button3.onclick = location["button functions"][2];
     text.innerHTML = location.text;
-    text.innerText += "\n\n Inventory : " + inventory;
+    //text.innerText += "\n\n Inventory : " + inventory;
 }
 
 function goTownSquare() {
@@ -144,7 +150,7 @@ function buyWeapon() {
     }
     else{
         text.innerText = "You already have the most powerful weapon!";
-        button2.innerText = "Sell weapon for 15 gold";
+        button2.innerText = "Sell weapon (15 Gold)";
         button2.onclick = sellWeapon;
     }
 }
@@ -195,7 +201,7 @@ function goFight() {
 }
 
 function attack() {
-    text.innerText = "You attack " + monsters[fighting].name + " with your " + weapons[currentWeapon].name + " !";
+    text.innerText = "\nYou attack " + monsters[fighting].name + " with your " + weapons[currentWeapon].name + " !";
     text.innerText += "\nThe " + monsters[fighting].name + " attacks you with its might !"
     health -= monsters[fighting].level;
     monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 2;
@@ -229,8 +235,11 @@ function winBattle() {
     xp += rewardXp;
     goldText.innerText = gold;
     xpText.innerText = xp;
-    update(locations[4]);
-//    text.innerText = "You defeated the " + monsters[fighting].name + " and gained " + rewardGold + "gold" & + rewardXp + "XP !";
+
+    // add random choice - lottery/kill monster location
+    const locationChoices = [locations[4], locations[7]];
+    const randomLocation = locationChoices[Math.floor(Math.random() * locationChoices.length)];
+    update(randomLocation);
 }
 
 function playerDead() {
@@ -251,4 +260,65 @@ function restart() {
     goldText.innerText = gold;
     healthText.innerText = health;
     goTownSquare();
+}
+
+function lottery(){
+    update(locations[7]);
+}
+
+function xpLottery(){
+    giftXp = Math.floor(Math.random() * 11);
+    xp += giftXp;
+    xpText.innerText = xp;
+    text.innerText += "\n You have been gifted with "+ giftXp + "XP !";
+}
+
+function surpriseLottery(){
+    text.innerText += "\n\nYou have been chosen for a secret game..o_O\n\nEnter a number between 1-10.";
+    text.innerText += " \nIF the number matches ~~Mother Gaia's~~ choices, you will be gifted with Monsters' forgiveness and +25 Health !";
+    text.innerText += "\n...or else... \nYou will be haunted with Monsters' Wrath and -50 Health !!";
+    
+    // create button and input elements, take user input
+    const inputValue = document.createElement('input');
+    inputValue.type = 'number';
+    const button = document.createElement('button');
+    button.innerText = 'Enter';
+
+    // append elements to body
+    document.body.appendChild(inputValue);
+    document.body.appendChild(button);
+    
+    // retrieve user input
+    button.addEventListener('click', function(){
+        const userInput = inputValue.value;
+        const numbers = [];
+        while(numbers.length < 7){
+            numbers.push(Math.floor(Math.random() * 5.4));
+        }
+        text.innerText += "~~Mother Gaia~~ chose the following numbers:"
+        for (let i = 0; i < numbers.length-1; i++){
+            text.innerText += numbers[i] + "\n";
+        }
+        if (numbers.includes(userInput)){
+            health += 25;
+            gold += 10;
+            healthText.innerText = health;
+            goldText.innerText = gold;
+            text.innerText = "You are blessed~~ You are gifted with +25 Health & +10 Gold !";
+        }
+        else{
+            health -= 50;
+            gold = 0;
+            if (health <= 0){
+                loseBattle();
+            }
+            else{
+                healthText.innerText = health;
+                goldText.innerText = gold;
+                text.innerText = "You are cursed !! You are haunted with -50 Health & 0 Gold ! Aaaa!!"
+            }
+        }
+        button.remove();
+        inputValue.remove();
+    })
 }
