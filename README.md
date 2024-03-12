@@ -99,93 +99,58 @@ G[COURSE PROJECT] -->MobileApplication-TBD
 # Learning Plan
 - Mastering these concepts is considered essential for a structured path to effectively learn and implement the development of the Mobile Applicaiton using React Native, Redux, and Tailwind CSS.
 
-<table>
-    <thead>
-        <tr>
-            <th>CATEGORY</th>
-            <th>Concepts to Learn</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>JavaScript Fundamentals</td>
-            <td>
-                <ul>
-                    <li><input type="checkbox">Variables, Data Types, Operators, Control Structures (if/else, switch, loops)</li>
-                    <li><input type="checkbox">Function Declarations, Function Expressions, Arrow Functions, Parameters, Return Values</li>
-                    <li><input type="checkbox">Creating Arrays, Accessing Array Elements, Array Methods (map, filter, reduce), Spread/Rest Operators</li>
-                    <li><input type="checkbox">Creating Objects, Accessing Object Properties, Object Methods, Object Destructuring</li>
-                    <li><input type="checkbox">Global Scope, Local Scope, Block Scope, Hoisting, Lexical Scope</li>
-                    <li><input type="checkbox">Closure Concept, Scope Chain, Practical Use Cases</li>
-                    <li><input type="checkbox">Promises, Async/Await, Fetch API, Handling Asynchronous Operations</li>
-                    <li><input type="checkbox">Understanding DOM, Selecting DOM Elements, Manipulating DOM Elements, Event Handling</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>React Basics</td>
-            <td>
-                <ul>
-                    <li><input type="checkbox">Creating Components, JSX Syntax, Rendering Components, Props</li>
-                    <li><input type="checkbox">State, setState, Class Components vs Functional Components</li>
-                    <li><input type="checkbox">componentDidMount, componentDidUpdate, componentWillUnmount</li>
-                    <li><input type="checkbox">Handling Events, Synthetic Events in React</li>
-                    <li><input type="checkbox">Conditional Rendering using if statements and ternary operators</li>
-                    <li><input type="checkbox">Rendering Lists, Keys in React</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>ES6 Features and Functional Programming</td>
-            <td>
-                <ul>
-                    <li><input type="checkbox">Arrow Functions Syntax, Lexical `this`</li>
-                    <li><input type="checkbox">Object Destructuring, Array Destructuring</li>
-                    <li><input type="checkbox">Spread Syntax, Rest Parameters</li>
-                    <li><input type="checkbox">Class Syntax, Constructors, Class Inheritance</li>
-                    <li><input type="checkbox">Exporting and Importing Modules, Default and Named Exports</li>
-                    <li><input type="checkbox">Functions as First-Class Citizens, Function Composition</li>
-                    <li><input type="checkbox">Immutable Data Structures, Benefits of Immutability</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>Asynchronous JavaScript</td>
-            <td>
-                <ul>
-                    <li><input type="checkbox">Creating Promises, Chaining Promises, Error Handling</li>
-                    <li><input type="checkbox">Async/Await Syntax, Handling Errors, Async Function Expressions</li>
-                    <li><input type="checkbox">Making HTTP Requests, Handling Responses, Error Handling</li>
-                    <li><input type="checkbox">Parallel and Sequential Execution, Promise.all, Promise.race</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>Redux</td>
-            <td>
-                <ul>
-                    <li><input type="checkbox">Store Creation, Store Methods, getState, dispatch, subscribe</li>
-                    <li><input type="checkbox">Action Types, Action Creators, Payload</li>
-                    <li><input type="checkbox">Reducer Functions, Pure Functions, Handling State Updates</li>
-                    <li><input type="checkbox">Thunk, Saga, Logger Middleware</li>
-                    <li><input type="checkbox">Immutability, Immutable.js Library (optional)</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>Tailwind CSS</td>
-            <td>
-                <ul>
-                    <li><input type="checkbox">Utility Classes, Tailwind CSS Configuration</li>
-                    <li><input type="checkbox">Responsive Classes, Media Queries</li>
-                    <li><input type="checkbox">Customizing Tailwind CSS, Creating Custom Utility Classes</li>
-                    <li><input type="checkbox">Tailwind CSS Plugins, Integration with Build Tools</li>
-                </ul>
-            </td>
-        </tr>
-    </tbody>
-</table>
 
+## Javascript Fundamentals
+- [X] Variables, Data Types, Operators, Control Structures (if/else, switch, loops)
+- [X] Function Declarations, Function Expressions, Arrow Functions, Parameters, Return Values
+- [X] Creating Arrays, Accessing Array Elements, Array Methods (map, filter, reduce), Spread/Rest Operators
+- [X] Creating Objects, Accessing Object Properties, Object Methods, Object Destructuring
+- [X] Global Scope, Local Scope, Block Scope, Hoisting, Lexical Scope
+- [ ] Closure Concept, Scope Chain, Practical Use Cases
+- [X] Promises, Async/Await, Fetch API, Handling Asynchronous Operations
+- [X] Understanding DOM, Selecting DOM Elements, Manipulating DOM Elements, Event Handling
+
+
+## React Basics
+- [ ] Creating Components, JSX Syntax, Rendering Components, Props
+- [ ] State, setState, Class Components vs Functional Components
+- [ ] componentDidMount, componentDidUpdate, componentWillUnmount
+- [ ] Handling Events, Synthetic Events in React
+- [ ] Conditional Rendering using if statements and ternary operators
+- [ ] Rendering Lists, Keys in React
+
+## ES6 Features and Functional Programming
+- [ ] Arrow Functions Syntax, Lexical `this`
+- [ ] Object Destructuring, Array Destructuring
+- [ ] Spread Syntax, Rest Parameters
+- [ ] Class Syntax, Constructors, Class Inheritance
+- [ ] Exporting and Importing Modules, Default and Named Exports
+- [ ] Functions as First-Class Citizens, Function Composition
+- [ ] Immutable Data Structures, Benefits of Immutability
+
+## Asynchronous JavaScript
+- [ ] Creating Promises, Chaining Promises, Error Handling
+- [ ] Async/Await Syntax, Handling Errors, Async Function Expressions
+- [ ] Making HTTP Requests, Handling Responses, Error Handling
+- [ ] Parallel and Sequential Execution, Promise.all, Promise.race
+
+## Redux
+- [ ] Store Creation, Store Methods, getState, dispatch, subscribe
+- [ ] Action Types, Action Creators, Payload
+- [ ] Reducer Functions, Pure Functions, Handling State Updates
+- [ ] Thunk, Saga, Logger Middleware
+- [ ] Immutability, Immutable.js Library (optional)
+
+## Tailwind CSS	
+- [ ] Utility Classes, Tailwind CSS Configuration
+- [ ] Responsive Classes, Media Queries
+- [ ] Customizing Tailwind CSS, Creating Custom Utility Classes
+- [ ] Tailwind CSS Plugins, Integration with Build Tools
+
+
+
+<br>
+<hr><hr>
 
 
 # Credits
