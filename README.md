@@ -60,7 +60,7 @@ G[COURSE PROJECT] -->MobileApplication-TBD
     -   [Geek4Geeks](https://www.geeksforgeeks.org/introduction-react-native/?ref=lbp)
 
 - [X] Installation of NodeJS
-- [ ] Basic knowledge in React 
+- [ ] Basic knowledge in ReactJS, Redux
 - [ ] Basic knowledge in ReactNative
 
 ## Overview
