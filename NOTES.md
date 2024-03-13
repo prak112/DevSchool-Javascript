@@ -1,6 +1,6 @@
 # Practice Platforms 
 - HackerRank <!--add solutions to orphan branch-hackerrank-->
-- CodeWars <!--add solutions to orphan branch-codewars-->
+- [CodeWars](https://www.codewars.com/users/prak112/stats) <!--add solutions to orphan branch-codewars / hyperlink-->
 - Chrome Browser console (Best debugger ever!)
     - *in a new Chrome browser tab, just press F12*
 - VS Code
@@ -12,6 +12,10 @@
     - [Common Mistake](#common-mistake)
     - [Doubts](#doubts)
     - [Practical Use Cases](#practical-use-cases)
+
+- [Hoisting](#hoisting)
+
+- [Asynchronous Javascript](#asynchronous-javascript)
 
 
 <br>
@@ -219,15 +223,18 @@ Learning Buddy : [![built with Codeium](https://codeium.com/badges/main)](https:
     - *An IIFE can capture and store the loop variable at the specific iteration and execute the IIFE at that specific iteration value* 
 
 - *However, a cleaner and simpler solution for handling the issue of closure function in loops is to declare loop variables with `let` instead of `var`*, thus :
-    - creating a new binding for each loop iteration, leading to a new lexical environment for each iteration
-    - resulting in correctly capturing the loop variable for the inner functions
+    - *creating a new binding for each loop iteration, leading to a new lexical environment for each iteration*
+    - *resulting in correctly capturing the loop variable for the inner functions*
 
 -  [Common Mistake example](/closures/common_mistake/main.js) clarifies question 1 & 2.
 
 <br>
 
 3. **How to identify when a lexical environment is shared ?**
-
+- *Shared lexical environment can be identified when :*
+    - *multiple inner-functions created within the same outer-function scope*
+    - *multiple inner-functions use the same outer-scope variables*
+- *Observing the inner-functions behaviour with their outer-scope helps in identifying shared lexical environments*
 
 <br>
 
@@ -235,7 +242,7 @@ Learning Buddy : [![built with Codeium](https://codeium.com/badges/main)](https:
 <br>
 
 
-### Usage
+### Considerations
 - *Closure* functions are considered to be memory and speed consuming and hence, computation-intensive
 - Hence, it is a given that they should not be declared if not needed for a specific task.
 - For example, *closure* functions/methods should not be created in a Class constructor, rather they should be defined within the Class prototype.
@@ -305,5 +312,40 @@ Source : <cite>GitHub CoPilot</cite>
 
 - In this example, a closure is used to capture the current value of `i` for each iteration, ensuring that the correct value is logged when the timeout function is called.
 
+<br>
+
 [Back To Contents](#contents)
 <br>
+<hr>
+
+## Hoisting
+
+- *Hoisting* refers to the process of moving declarations of functions, variables, classes, or imports to the top of their scope by the interpreter during the compilation phase.
+
+- Not a normally used term in ES6 specification
+
+- Four different types of *Hoisting* :
+1. Being able to use a variable's value in its scope before the line it is declared. ("Value hoisting") -->  `function`, `function*`, `async function`, `async function*` declarations and `import` decalartions
+
+2. Being able to reference a variable in its scope before the line it is declared, without throwing a ReferenceError, but the value is always undefined. ("Declaration hoisting") --> `var` declarations 
+
+3. The declaration of the variable causes behavior changes in its scope before the line in which it is declared --> `let`, `const` and `class` declarations a.k.a *Lexical declarations*
+
+4. The side effects of a declaration are produced before evaluating the rest of the code that contains it --> `import` decalartions
+
+<br>
+
+[Back To Contents](#contents)
+<br>
+<hr>
+
+
+## Asynchronous Javascript
+*...WIP...*
+
+
+<br>
+
+[Back To Contents](#contents)
+<br>
+<hr>
