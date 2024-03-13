@@ -104,9 +104,9 @@ G[COURSE PROJECT] -->MobileApplication-TBD
 - [X] Variables, Data Types, Operators, Control Structures (if/else, switch, loops)
 - [X] Function Declarations, Function Expressions, Arrow Functions, Parameters, Return Values
 - [X] Creating Arrays, Accessing Array Elements, Array Methods (map, filter, reduce), Spread/Rest Operators
-- [X] Creating Objects, Accessing Object Properties, Object Methods, Object Destructuring
+- [ ] Creating Objects, Accessing Object Properties, Object Methods, Object Destructuring
 - [X] Global Scope, Local Scope, Block Scope, Hoisting, Lexical Scope
-- [ ] Closure Concept, Scope Chain, Practical Use Cases
+- [X] Closure Concept, Scope Chain, Practical Use Cases
 - [X] Promises, Async/Await, Fetch API, Handling Asynchronous Operations
 - [X] Understanding DOM, Selecting DOM Elements, Manipulating DOM Elements, Event Handling
 
@@ -155,3 +155,6 @@ G[COURSE PROJECT] -->MobileApplication-TBD
 
 # Credits
 - Planning Assistance  - **ChatGPT 3.5**
+- Learning Assistance :
+    - [![built with Codeium](https://codeium.com/badges/main)](https://codeium.com)
+    - **Github CoPilot**
