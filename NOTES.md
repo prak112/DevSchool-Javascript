@@ -13,7 +13,7 @@
             - `node_modules` directory - includes all needed packages for the project (assuming trust in *react.dev*)
             - `package-lock.json` file - includes description of all created packages under `packages` key
     - [X] Add `node_modules` directory created after `npm install` to `.gitignore`
-    - [ ] Check for security vulnerabilities with outdated packages, `npm audit`
+    - [X] Check for security vulnerabilities with outdated packages, `npm audit`
         - Always worth considering the risks, if updating packages introduces *breaking change*
-        - *Learn and Experiment* - create a new branch to handle the package updates, `git branch -b update-dependencies`
-    - [ ] Run local server, `npm start`
+    - [X] *Learn and Experiment* - create a new branch to handle the package updates, `git branch -b update-dependencies`
+    - [X] Run local server, `npm start` - runs the server in default browser 
