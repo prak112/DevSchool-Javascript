@@ -112,21 +112,29 @@ G[COURSE PROJECT] -->MobileApplication-TBD
 
 
 ## React Basics
-- [ ] Creating Components, JSX Syntax, Rendering Components, Props
+- [ ] JSX syntax
+- [ ] Creating Components, Rendering Components, Props
 - [ ] State, setState, Class Components vs Functional Components
 - [ ] componentDidMount, componentDidUpdate, componentWillUnmount
 - [ ] Handling Events, Synthetic Events in React
 - [ ] Conditional Rendering using if statements and ternary operators
 - [ ] Rendering Lists, Keys in React
 
-## ES6 Features and Functional Programming
-- [ ] Arrow Functions Syntax, Lexical `this`
+## ES6 Features, Functional Programming
+- [X] Arrow Functions Syntax, Lexical `this`
 - [ ] Object Destructuring, Array Destructuring
 - [ ] Spread Syntax, Rest Parameters
 - [ ] Class Syntax, Constructors, Class Inheritance
 - [ ] Exporting and Importing Modules, Default and Named Exports
 - [ ] Functions as First-Class Citizens, Function Composition
 - [ ] Immutable Data Structures, Benefits of Immutability
+
+# Javascript Objects
+- [ ] Basics
+- [ ] Prototypes
+- [ ] Object-oriented Programming - instances, Inheritance, Encapsulation
+- [ ] Classes
+- [ ] JSON
 
 ## Asynchronous JavaScript
 - [ ] Creating Promises, Chaining Promises, Error Handling
