@@ -2,6 +2,7 @@
 - Learn and implement ReactJS Fundmentals (list below)
 
 ## ReactJS Fundamental
+- [X] Project setup in local env
 - [ ] JSX syntax
 - [ ] Creating Components, Rendering Components, Props
 - [ ] State, setState, Class Components vs Functional Components
