@@ -14,10 +14,10 @@ function Square({ value, onSquareClick }) {
 }
 
 // Gameboard
-function Board(xIsNext, squares, onPlay) {
+function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i){
     // verify is square has 'X' or 'O'
-    if (squares[i] || calculateWinner(squares)){
+    if (calculateWinner(squares) || squares[i]){
       return;   // early return to prevent changes on multiple clicks
     }
     const nextSquares = squares.slice();  // copy squares array for immutability, i.e., to prevent direct changes without using setState method  
@@ -65,14 +65,38 @@ function Board(xIsNext, squares, onPlay) {
 
 // top-level component
 export default function Game(){
-  const [xIsNext, setXIsNext] = useState(null);
   const [history, setHistory] = useState([Array(9).fill(null)]);
-  const currentSquares = history[history.length - 1];  // access latest array element for updated States of Square Components
+  const [currentMove, setCurrentMove] = useState(0);
+  const xIsNext = currentMove % 2 === 0;
+  const currentSquares = history[currentMove];  // access latest array element with the updated State of Square Component
 
   function handlePlay(nextSquares) {
-    setHistory([...history, nextSquares]);
-    setXIsNext(!xIsNext);    
+    // include history until currentMove
+    const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];  // '...history' enumerates all the items in the 'history' including 'nextSquares'
+    setHistory(nextHistory);  
+    setCurrentMove(nextHistory.length - 1);
   }
+
+  // reassign null state to Square component
+  function jumpTo(nextMove){
+    setCurrentMove(nextMove);
+  }
+
+  // generate undo move element by using moves history
+  const moves = history.map((squares, move) => { // 'squares' - array element, 'move' - array index
+    let description;
+    if(move > 0) { // verify if sub-array element is null
+      description = `Go To Move #${move}`;    
+    }
+    else {
+      description = 'Start Game';
+    }
+    return (
+      <li key={move}>
+        <button onClick={() => jumpTo(move)}>{ description }</button>
+      </li>
+    ); 
+  });
 
   return (
     <>
@@ -81,7 +105,7 @@ export default function Game(){
           <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
         </div>
         <div className="game-info">
-          <ol>{ /* TO DO - Moves History */ }</ol>
+          <ul>{moves}</ul>
         </div>
       </div>
     </>
