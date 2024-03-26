@@ -42,26 +42,25 @@ function Board({ xIsNext, squares, onPlay }) {
 
   return (
     <>
-      <div className="status">{ status }</div>
+      <div className="status">{status}</div>
       <div className="board-row">
-        <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
-        <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
-        <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
+        {squares.slice(0, 3).map((square, index) => (
+          <Square key={index} value={square} onSquareClick={() => handleClick(index)} />
+        ))}
       </div>
       <div className="board-row">
-        <Square value={squares[3]}  onSquareClick={() => handleClick(3)} />
-        <Square value={squares[4]}  onSquareClick={() => handleClick(4)} />
-        <Square value={squares[5]}  onSquareClick={() => handleClick(5)} />
+        {squares.slice(3, 6).map((square, index) => (
+          <Square key={index + 3} value={square} onSquareClick={() => handleClick(index + 3)} />
+        ))}
       </div>
       <div className="board-row">
-        <Square value={squares[6]}  onSquareClick={() => handleClick(6)} />
-        <Square value={squares[7]}  onSquareClick={() => handleClick(7)} />
-        <Square value={squares[8]}  onSquareClick={() => handleClick(8)} />
+        {squares.slice(6).map((square, index) => (
+          <Square key={index + 6} value={square} onSquareClick={() => handleClick(index + 6)} />
+        ))}
       </div>
     </>
   );
-}  
-
+}
 
 // top-level component
 export default function Game(){
