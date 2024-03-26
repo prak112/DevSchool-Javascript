@@ -210,6 +210,7 @@ export default function ParentComponent() {
 
 # ERROR LOGS
 - Debugging assistants 
+    - **Critical Thinking & Patience**
     - **GitHub CoPilot Chat**
     - **Codeuim Chat**
 
@@ -251,6 +252,20 @@ export default function ParentComponent() {
         ```
     - Server online and compilation success!
 
+
+3. **ERROR**
+    - Board *Component* does not render the Square *Components* with the passed down *Props* from Game *Component*, namely - `xIsNext`, `squares`, `onPlay`
+
+- **CONSEEQUENCE**
+    - Browser renders the 'XO' gameboard, but does not respond to clicking the Squares
+    - Developer Tools Console throws an error
+        - App.js:23 Uncaught TypeError: squares.slice is not a function 
+        - at handleClick (App.js:23:1)
+        - at onSquareClick (App.js:54:1)
+
+- **SOLUTION**
+    - Go through each line of code
+    - Finally figured that did NOT pass the *Props* down to Game *Component* as they are meant to inside `{}` as `Board ({ xIsNext, squares, onPlay })`
 
 <br>
 
