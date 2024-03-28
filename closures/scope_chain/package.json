@@ -1,0 +1,13 @@
+{
+  "name": "devschool-javascript",
+  "version": "1.0.0",
+  "description": "- Learn Fundamentals of Javascript, React JS, Redux, React Native\r  - Learn Advanced concepts in Javascript\r  - Implement [Course Project](#course-project---tbd)\r  - Check [Learning Plan](#learning-plan) for details",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
