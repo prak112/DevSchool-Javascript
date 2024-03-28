@@ -31,7 +31,7 @@ function Board({ xIsNext, squares, onPlay }) {
   }
 
   // display player status
-  const winner = calculateWinner(squares);
+  const [winner, winCombo] = calculateWinner(squares);  //TODO: useState to setColor for winCombo
   let status; 
   if (winner) {
     status = `Winner : ${winner}`;
@@ -127,7 +127,7 @@ function calculateWinner(squares) {
   for (let i = 0; i < winningCombos.length; i++) {
     const [a, b, c] = winningCombos[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a];
+      return [squares[a], [a, b, c]];
     }
   }
   return null;
