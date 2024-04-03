@@ -1,6 +1,14 @@
 {
   "dependencies": {
+    "parcel": "^2.10.3",
     "pokedex-promise-v2": "^4.2.0"
   },
-  "type":  "module"
+  "type": "module",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "events": "^3.3.0"
+  }
 }
