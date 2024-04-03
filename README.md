@@ -11,11 +11,11 @@
 
 
 # Functionality
-- Identify **Pokemon** by 'name' or list several **Pokemons** by 'type'
-- On a successful search request(`getPokemonByName` or `getTypeByName`), the application will display :
-    - **Pokemon** image, (`Pokemon`- `name`, `PokemonSprites`-`front default`)
-    - physical and health stats (`Pokemon`-`base xp`, `height`, `weight`, `PokemonType`-`type`) 
-    - basic abilities (`PokemonAbility`)
-    - basic attacks ()
-    - evolution (`EvolutionChain`, `EvolutionTrigger`) - *coming soon*
+- Identify **Pokemon** by 'name'
+- On a successful search request(`getPokemonByName`), the application will display :
+    - **Pokemon** image, (`Pokemon`- `name`, `PokemonSprites`-`front_default`)
+    - Physical and Health stats (`Pokemon`-`base xp`, `height`, `weight`, `PokemonType`-`type`) 
+    - Abilities (`PokemonAbility`)
+    - Moves or attacks
+    - Evolution data (`EvolutionChain`, `EvolutionTrigger`) - *coming soon*
 
