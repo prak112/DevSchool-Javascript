@@ -112,13 +112,14 @@ G[COURSE PROJECT] -->MobileApplication-TBD
 
 
 ## React Basics
-- [ ] JSX syntax
-- [ ] Creating Components, Rendering Components, Props
-- [ ] State, setState, Class Components vs Functional Components
+- [X] JSX syntax
+- [X] Creating Components, Rendering Components, Props
+- [X] State, setState, 
+- [ ] Class Components vs Functional Components
 - [ ] componentDidMount, componentDidUpdate, componentWillUnmount
 - [ ] Handling Events, Synthetic Events in React
-- [ ] Conditional Rendering using if statements and ternary operators
-- [ ] Rendering Lists, Keys in React
+- [X] Conditional Rendering using if statements and ternary operators
+- [X] Rendering Lists, Keys in React
 
 ## ES6 Features, Functional Programming
 - [X] Arrow Functions Syntax, Lexical `this`
@@ -127,18 +128,17 @@ G[COURSE PROJECT] -->MobileApplication-TBD
 - [ ] Class Syntax, Constructors, Class Inheritance
 - [ ] Exporting and Importing Modules, Default and Named Exports
 - [ ] Functions as First-Class Citizens, Function Composition
-- [ ] Immutable Data Structures, Benefits of Immutability
+- [X] Immutable Data Structures, Benefits of Immutability
 
-# Javascript Objects
+# Javascript Prototypes
 - [ ] Basics
-- [ ] Prototypes
-- [ ] Object-oriented Programming - instances, Inheritance, Encapsulation
+- [ ] Instances, Inheritance, Encapsulation
 - [ ] Classes
 - [ ] JSON
 
 ## Asynchronous JavaScript
-- [ ] Creating Promises, Chaining Promises, Error Handling
-- [ ] Async/Await Syntax, Handling Errors, Async Function Expressions
+- [X] Creating Promises, Chaining Promises, Error Handling
+- [X] Async/Await Syntax, Handling Errors, Async Function Expressions
 - [ ] Making HTTP Requests, Handling Responses, Error Handling
 - [ ] Parallel and Sequential Execution, Promise.all, Promise.race
 
