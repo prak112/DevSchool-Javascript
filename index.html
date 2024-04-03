@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeDex</title>
+    <script type="module" src="main.js" defer></script>
 </head>
 <body>
-    <div>
+    <h1>Welcome to your personal PokeDex!</h1>
+    <div class="pokedex-console">
+        <form>
+            <input autofocus id="search" type="text" placeholder="Enter a Pokemon name..." autocomplete="off"/>
+            <input type="submit" value="Get Details!" />
+        </form>
+        <div id="pokemon-name"></div>
+        <div id="pokemon-image"></div>
+        <div id="pokemon-description"></div>
     </div>
 </body>
 </html>
