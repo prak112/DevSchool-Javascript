@@ -2,42 +2,56 @@
 import Pokedex from 'pokedex-promise-v2';
 const pokedex = new Pokedex;
 
-(async() => {
-        const pokemonData = await pokedex.getPokemonByName(['caterpie', 'squirtle', 'pikachu'])
-        try{
-            // console.log(pokemonData)
-            for(let pokemon of pokemonData){
-                // TODO: display PokemonSprite- front_default
-                // TODO: util.js- titleCase, language conversion,
+document.querySelector('form').onsubmit = (event) => {
+    event.preventDefault();
+    loadPokemonData();
+}
 
-                console.log(pokemon.name.toUpperCase())
-                console.log(`Pokemon ID : ${pokemon.id}`)
-                console.log(`Pokemon physical stats :\nHeight : ${pokemon.height}\tWeight : ${pokemon.weight}\tBase XP : ${pokemon.base_experience}XP`)
-                // list all abilities
-                let mainAbility = pokemon.abilities[0].ability.name
-                let abilityURL = pokemon.abilities[0].ability.url
+const loadPokemonData = async() => {
+    // initialize details
+    let pokemonName = document.getElementById('pokemon-name');
+    let pokemonImage = document.getElementById('pokemon-image');
+    let pokemonDescription = document.getElementById('pokemon-description');
+    // list main ability
+    
 
-                let getAbilityDescription = (abilityDescription) => {
-                    let description = '';
-                    abilityDescription.effect_entries.forEach((item) => {
-                        if (item.language.name === 'en') {
-                            description = item.effect;
-                        }
-                    });
-                    return description !== '' ? description : 'N/A in English';
-                };
+    // clear previous search results
+    pokemonName.innerHTML = '';
+    pokemonImage.innerHTML = '';
+    pokemonDescription.innerHTML = '';
+        
 
-                let abilityData = await pokedex.getResource(abilityURL);
+    let searchQuery = document.getElementById('search').value;
 
-                console.log(`Pokemon Abilities :\nMain Ability : ${mainAbility}\nDescription :\n${getAbilityDescription(abilityData)}\n`)
-                console.log(`Top 5 Pokemon Moves :`)
-                pokemon.moves.slice(0, 5).forEach((movesObj, index) => {
-                    console.log(`Move #${index + 1} : ${movesObj.move.name}`);
-                });
-                console.log('\n')
-            }
-        }
-        catch(err){
-            console.log(`Pokedex Malfunction!\n ERROR: ${err}`)
-        }
-})()
+    try{
+        const pokemonData = await new Promise((resolve, reject) => {
+            setTimeout(async () => {
+                try{
+                    const data = await pokedex.getPokemonByName(searchQuery);
+                    resolve(data);
+                }
+                catch(error){
+                    reject(error);
+                }
+            }, 2000);   // delay
+        });
+
+        pokemonName.innerHTML += `<p>${pokemonData.name.toUpperCase()}</p>`
+        pokemonImage.innerHTML += `<img src="${pokemonData.sprites.front_default}"/>`
+        pokemonDescription.innerHTML += `
+        <ul>
+            <li>Pokemon ID : ${pokemonData.id}</li>
+            <li>Pokemon Stats : 
+                <ul>
+                    <li>Height : ${pokemonData.height}</li>
+                    <li>Weight : ${pokemonData.weight}</li>
+                    <li>Base XP: ${pokemonData.base_experience}</li>
+                </ul>
+            </li>
+        </ul>`;
+    }
+    catch(err){
+        console.log(`Pokedex Malfunction!\n ERROR: ${err}`)
+    }
+};
+
