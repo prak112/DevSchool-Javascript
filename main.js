@@ -1,6 +1,6 @@
 // pokedex library for npm - https://github.com/PokeAPI/pokedex-promise-v2
 import Pokedex from 'pokedex-promise-v2';
-const pokedex = new Pokedex;
+const pokedex = new Pokedex();
 
 document.querySelector('form').onsubmit = (event) => {
     event.preventDefault();
@@ -21,7 +21,7 @@ const loadPokemonData = async() => {
     pokemonDescription.innerHTML = '';
         
 
-    let searchQuery = document.getElementById('search').value;
+    let searchQuery = document.getElementById('search').value.toLowerCase();
 
     try{
         const pokemonData = await new Promise((resolve, reject) => {
