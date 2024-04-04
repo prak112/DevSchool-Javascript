@@ -1,6 +1,6 @@
 # Agenda
- - Learn Fundamentals of Javascript, React JS, Redux, React Native
- - Learn Advanced concepts in Javascript
+ - Learn Fundamentals of JavaScript, React JS, Redux, React Native
+ - Learn Advanced concepts in JavaScript
  - Implement [Course Project](#course-project---tbd)
  - Check [Learning Plan](#learning-plan) for details
 
@@ -15,13 +15,21 @@
 # Progress
 - See [Notes](NOTES.md)
 
-- Javascript Fundamentals practice 
-    - **freeCodeCamp** - Text-based Role Playing Game
-        - Check [Project](https://github.com/prak112/DevSchool-Javascript/tree/text-rpg)
-        - [Play](https://prak112.github.io/DevSchool-Javascript/)
-    - **CS50 W** 
-        - [Implementation of concepts](https://github.com/prak112/cs50-webdev/tree/main/javascript)
+## JavaScript Fundamentals practice 
+- **freeCodeCamp (fCC)** - Text-based Role Playing Game
+    - [Source code](https://github.com/prak112/DevSchool-JavaScript/tree/text-rpg)
+    - [Gameplay](https://prak112.github.io/DevSchool-JavaScript/)
+- **CS50 W** 
+    - [Implementation of concepts](https://github.com/prak112/cs50-webdev/tree/main/javascript) - based on [Lecture 5](https://youtu.be/x5trGVMKTdY?si=MYl_hguORRbdarCO)
+- **Practice Exercises** 
+    - [Algorithms practice](https://github.com/prak112/DevSchool-Javascript/tree/practice-problems/algorithms_practice) - based on [Top 10 Algorithms by fCC](https://youtu.be/ufBbWIyKY2E?si=UquSOoJ9zXHaU4Br)
+    - Clearing confusions - [`for...in` Vs `for...of`](https://github.com/prak112/DevSchool-Javascript/tree/practice-problems/for-in_V_for-of) 
 
+## JavaScript Frameworks practice
+- ReactJS 
+    - [mini-project](https://github.com/prak112/DevSchool-Javascript/tree/react-js) - based on [React Documentation](https://react.dev/learn)
+- Bootstrap
+    - [Quick learning](https://github.com/prak112/DevSchool-Javascript/tree/bootstrap-parcel) - based on [Bootstrap Documentation](https://getbootstrap.com/docs/5.3/layout/breakpoints/)
 
 <br>
 
@@ -33,6 +41,10 @@ A[FUNDAMENTALS] -->Conditionals & Loops & Arrays & Objects & DocumentObjectModel
 
 B[ADVANCED CONCEPTS] --> Closures & Hoisting & AsynchronousProgramming
 ```
+
+<!-- ADD Git Branches to show PROGRESS!!-->
+
+
 
 # Future Focus
 ```mermaid
@@ -73,7 +85,7 @@ G[COURSE PROJECT] -->MobileApplication-TBD
     </tr>
     <tr>
         <th>Frontend</th>
-        <td>HTML5, TailwindCSS, Javascript</td>
+        <td>HTML5, TailwindCSS, JavaScript</td>
     </tr>
     <tr>
         <th>Backend</th>
@@ -100,7 +112,7 @@ G[COURSE PROJECT] -->MobileApplication-TBD
 - Mastering these concepts is considered essential for a structured path to effectively learn and implement the development of the Mobile Applicaiton using React Native, Redux, and Tailwind CSS.
 
 
-## Javascript Fundamentals
+## JavaScript Fundamentals
 - [X] Variables, Data Types, Operators, Control Structures (if/else, switch, loops)
 - [X] Function Declarations, Function Expressions, Arrow Functions, Parameters, Return Values
 - [X] Creating Arrays, Accessing Array Elements, Array Methods (map, filter, reduce), Spread/Rest Operators
@@ -130,7 +142,7 @@ G[COURSE PROJECT] -->MobileApplication-TBD
 - [ ] Functions as First-Class Citizens, Function Composition
 - [X] Immutable Data Structures, Benefits of Immutability
 
-# Javascript Prototypes
+# JavaScript Prototypes
 - [ ] Basics
 - [ ] Instances, Inheritance, Encapsulation
 - [ ] Classes
