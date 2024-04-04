@@ -1,2 +1,7 @@
 // Import Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
+@include media-breakpoint-between(md, xxl){
+    .heading {
+        display: block;
+    }
+}

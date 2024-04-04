@@ -8,10 +8,70 @@
 </head>
 <body>
     <div class="container py-4 px-3 mx-auto">
-        <h1>Practice session with Bootstrap and Parcel</h1>
+        <!---py-4 px-3 mx-auto = padding & margin, to center content-->
+        <h1 class="heading">Practice session with Bootstrap and Parcel</h1>
         <p><em>Mainly to implement the PokeDex console with love and ease!</em></p>
+    </div>
+    <div class="container py-4 px-3 mx-auto">
+        <h2 class="heading">Breakpoints & Containers</h2>
+        <p><code>Breakpoints</code> are used to create responsive content, i.e, content layout changes based on the <code>device-width</code> (viewport size).</p>
+        <p>
+            Content in the <code>container</code> responds as follows :
+            <ul>
+                <li>IF <code>device-width</code> or viewport size &gt; <code>min-width</code>, THEN content EXPANDS</li>
+                <li>IF <code>device-width</code> or viewport size &lt; <code>min-width</code>, THEN content SHRINKS</li>
+            </ul>
+        </p>
+        <p><i>The above content is in a default <code>container</code>, which adapts similar to <code>container-sm</code></i></p>        
+    </div>
+    <div class="container-sm">
+        <h3>Example</h3>
+        <p>This is <code>container-sm</code>, 100% wide until SMALL-breakpoint == Comfortable on Mobile screens</p>
+        <p>Lorem 50 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem officia laborum eius ullam recusandae ducimus nihil, veniam laudantium distinctio repellendus nulla nisi tenetur vel similique soluta? Nobis amet rem laboriosam quod quia vero, tempora molestiae adipisci quam, corporis natus. Blanditiis illum, sequi consectetur numquam repellat nostrum earum consequuntur quisquam molestiae?</p>
         <button class="btn btn-primary">Primary Button</button>
         <button class="btn btn-secondary">Secondary Button</button>
+    </div>
+    <div class="container-md">
+        <p>This is <code>container-md</code>, 100% wide until MEDIUM-breakpoint == Comfortable on Mobile & Tablet screens</p>
+        <p>Lorem 50 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem officia laborum eius ullam recusandae ducimus nihil, veniam laudantium distinctio repellendus nulla nisi tenetur vel similique soluta? Nobis amet rem laboriosam quod quia vero, tempora molestiae adipisci quam, corporis natus. Blanditiis illum, sequi consectetur numquam repellat nostrum earum consequuntur quisquam molestiae?</p>
+        <button class="btn btn-primary">Primary Button</button>
+        <button class="btn btn-secondary">Secondary Button</button>
+    </div>
+    <div class="container-lg">
+        <p>This is <code>container-lg</code>, 100% wide until LARGE-breakpoint == Comfortable on Mobile, Tablet & Laptop screens</p>
+        <p>Lorem 50 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem officia laborum eius ullam recusandae ducimus nihil, veniam laudantium distinctio repellendus nulla nisi tenetur vel similique soluta? Nobis amet rem laboriosam quod quia vero, tempora molestiae adipisci quam, corporis natus. Blanditiis illum, sequi consectetur numquam repellat nostrum earum consequuntur quisquam molestiae?</p>
+        <button class="btn btn-primary">Primary Button</button>
+        <button class="btn btn-secondary">Secondary Button</button>
+    </div>
+    <div class="container-xl">
+        <p>This is <code>container-xl</code>, 100% wide until EXTRA LARGE-breakpoint == Comfortable on Mobile, Tablet, Laptop & Desktop screens</p>
+        <p>Lorem 50 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem officia laborum eius ullam recusandae ducimus nihil, veniam laudantium distinctio repellendus nulla nisi tenetur vel similique soluta? Nobis amet rem laboriosam quod quia vero, tempora molestiae adipisci quam, corporis natus. Blanditiis illum, sequi consectetur numquam repellat nostrum earum consequuntur quisquam molestiae?</p>
+        <button class="btn btn-primary">Primary Button</button>
+        <button class="btn btn-secondary">Secondary Button</button>
+    </div>    
+    <div class="container-fluid">
+        <p>This is <code>container-fluid</code>, 100% wide all times == Comfortable on Anything, spans entire width</p>
+        <p>Lorem 50 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem officia laborum eius ullam recusandae ducimus nihil, veniam laudantium distinctio repellendus nulla nisi tenetur vel similique soluta? Nobis amet rem laboriosam quod quia vero, tempora molestiae adipisci quam, corporis natus. Blanditiis illum, sequi consectetur numquam repellat nostrum earum consequuntur quisquam molestiae?</p>
+        <button class="btn btn-primary">Primary Button</button>
+        <button class="btn btn-secondary">Secondary Button</button>
+    </div>
+
+    <div class="container py-4 px-3 mx-auto">
+        <h2 class="heading">Grid System</h2>
+
+    </div>
+    <div class="container-sm">
+        <div class="row">
+            <div class="col">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non soluta earum ipsam quisquam eos est saepe, ipsa veritatis numquam, quaerat, autem excepturi eveniet quibusdam suscipit accusamus pariatur. Pariatur, voluptas! Sapiente facilis laborum, molestiae dolor porro facere dolores aperiam, sint quibusdam tenetur provident ratione fuga rerum eum voluptatibus voluptates quas minus.
+            </div>
+            <div class="col">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non soluta earum ipsam quisquam eos est saepe, ipsa veritatis numquam, quaerat, autem excepturi eveniet quibusdam suscipit accusamus pariatur. Pariatur, voluptas! Sapiente facilis laborum, molestiae dolor porro facere dolores aperiam, sint quibusdam tenetur provident ratione fuga rerum eum voluptatibus voluptates quas minus.
+            </div>
+            <div class="col">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non soluta earum ipsam quisquam eos est saepe, ipsa veritatis numquam, quaerat, autem excepturi eveniet quibusdam suscipit accusamus pariatur. Pariatur, voluptas! Sapiente facilis laborum, molestiae dolor porro facere dolores aperiam, sint quibusdam tenetur provident ratione fuga rerum eum voluptatibus voluptates quas minus.
+            </div>
+        </div>
     </div>
 </body>
 </html>
