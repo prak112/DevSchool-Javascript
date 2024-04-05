@@ -11,6 +11,10 @@
         <!---py-4 px-3 mx-auto = padding & margin, to center content-->
         <h1 class="heading">Practice session with Bootstrap and Parcel</h1>
         <p><em>Mainly to implement the PokeDex console with love and ease!</em></p>
+        <blockquote>
+            TO REMEMBER : Classes can always be customised using <i>SASS Mixins</i>,
+            BUT cannot be renamed !
+        </blockquote>
     </div>
     <div class="container py-4 px-3 mx-auto">
         <h2 class="heading">Breakpoints & Containers</h2>
@@ -18,60 +22,216 @@
         <p>
             Content in the <code>container</code> responds as follows :
             <ul>
-                <li>IF <code>device-width</code> or viewport size &gt; <code>min-width</code>, THEN content EXPANDS</li>
+                <li>IF <code>device-width</code> or viewport size &ge; <code>min-width</code>, THEN content EXPANDS</li>
                 <li>IF <code>device-width</code> or viewport size &lt; <code>min-width</code>, THEN content SHRINKS</li>
             </ul>
         </p>
-        <p><i>The above content is in a default <code>container</code>, which adapts similar to <code>container-sm</code></i></p>        
+        <p><i>The above content is in a default container class, <code>.container</code>, which adapts similar to <code>container-sm</code></i></p>        
     </div>
-    <div class="container-sm">
+
+    <div class="border border-info container py-4 px-3">
         <h3>Example</h3>
-        <p>This is <code>container-sm</code>, 100% wide until SMALL-breakpoint == Comfortable on Mobile screens</p>
-        <p>Lorem 50 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem officia laborum eius ullam recusandae ducimus nihil, veniam laudantium distinctio repellendus nulla nisi tenetur vel similique soluta? Nobis amet rem laboriosam quod quia vero, tempora molestiae adipisci quam, corporis natus. Blanditiis illum, sequi consectetur numquam repellat nostrum earum consequuntur quisquam molestiae?</p>
+        <p>
+            <b>IF</b> the below container class examples were wrapped inside this &lt;<b>div</b>&gt; container
+            with a default container class <code>.container</code>, they would ALL behave and adapt exactly like
+            <code>.container</code> class.
+        </p>
+    </div>
+    <div class="border border-info-subtle container-sm">
+        <p>Container class is <code>.container-sm</code>, 100% wide until SMALL-breakpoint == Comfortable on Mobile screens</p>
+        <p>Lorem 25 - <s>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatem dolor debitis esse error at fugit sit. Repudiandae eum dicta saepe ipsam laborum obcaecati quo.</p></s>
         <button class="btn btn-primary">Primary Button</button>
         <button class="btn btn-secondary">Secondary Button</button>
     </div>
-    <div class="container-md">
-        <p>This is <code>container-md</code>, 100% wide until MEDIUM-breakpoint == Comfortable on Mobile & Tablet screens</p>
-        <p>Lorem 50 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem officia laborum eius ullam recusandae ducimus nihil, veniam laudantium distinctio repellendus nulla nisi tenetur vel similique soluta? Nobis amet rem laboriosam quod quia vero, tempora molestiae adipisci quam, corporis natus. Blanditiis illum, sequi consectetur numquam repellat nostrum earum consequuntur quisquam molestiae?</p>
+    <div class="border border-info-subtle container-md">
+        <p>Container class is <code>.container-md</code>, 100% wide until MEDIUM-breakpoint == Comfortable on Mobile & Tablet screens</p>
+        <p>Lorem 25 - <s>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatem dolor debitis esse error at fugit sit. Repudiandae eum dicta saepe ipsam laborum obcaecati quo.</p></s>
         <button class="btn btn-primary">Primary Button</button>
         <button class="btn btn-secondary">Secondary Button</button>
     </div>
-    <div class="container-lg">
-        <p>This is <code>container-lg</code>, 100% wide until LARGE-breakpoint == Comfortable on Mobile, Tablet & Laptop screens</p>
-        <p>Lorem 50 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem officia laborum eius ullam recusandae ducimus nihil, veniam laudantium distinctio repellendus nulla nisi tenetur vel similique soluta? Nobis amet rem laboriosam quod quia vero, tempora molestiae adipisci quam, corporis natus. Blanditiis illum, sequi consectetur numquam repellat nostrum earum consequuntur quisquam molestiae?</p>
+    <div class="border border-info-subtle container-lg">
+        <p>Container class is <code>.container-lg</code>, 100% wide until LARGE-breakpoint == Comfortable on Mobile, Tablet & Laptop screens</p>
+        <p>Lorem 25 - <s>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatem dolor debitis esse error at fugit sit. Repudiandae eum dicta saepe ipsam laborum obcaecati quo.</p></s>
         <button class="btn btn-primary">Primary Button</button>
         <button class="btn btn-secondary">Secondary Button</button>
     </div>
-    <div class="container-xl">
-        <p>This is <code>container-xl</code>, 100% wide until EXTRA LARGE-breakpoint == Comfortable on Mobile, Tablet, Laptop & Desktop screens</p>
-        <p>Lorem 50 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem officia laborum eius ullam recusandae ducimus nihil, veniam laudantium distinctio repellendus nulla nisi tenetur vel similique soluta? Nobis amet rem laboriosam quod quia vero, tempora molestiae adipisci quam, corporis natus. Blanditiis illum, sequi consectetur numquam repellat nostrum earum consequuntur quisquam molestiae?</p>
+    <div class="border border-info-subtle container-xl">
+        <p>Container class is <code>.container-xl</code>, 100% wide until EXTRA LARGE-breakpoint == Comfortable on Mobile, Tablet, Laptop & Desktop screens</p>
+        <p>Lorem 25 - <s>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatem dolor debitis esse error at fugit sit. Repudiandae eum dicta saepe ipsam laborum obcaecati quo.</p></s>
         <button class="btn btn-primary">Primary Button</button>
         <button class="btn btn-secondary">Secondary Button</button>
     </div>    
-    <div class="container-fluid">
-        <p>This is <code>container-fluid</code>, 100% wide all times == Comfortable on Anything, spans entire width</p>
-        <p>Lorem 50 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem officia laborum eius ullam recusandae ducimus nihil, veniam laudantium distinctio repellendus nulla nisi tenetur vel similique soluta? Nobis amet rem laboriosam quod quia vero, tempora molestiae adipisci quam, corporis natus. Blanditiis illum, sequi consectetur numquam repellat nostrum earum consequuntur quisquam molestiae?</p>
+    <div class="border border-info-subtle container-fluid">
+        <p>Container class is <code>.container-fluid</code>, 100% wide all times == Comfortable on Anything, spans entire width</p>
+        <p>Lorem 25 - <s>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatem dolor debitis esse error at fugit sit. Repudiandae eum dicta saepe ipsam laborum obcaecati quo.</p></s>
         <button class="btn btn-primary">Primary Button</button>
         <button class="btn btn-secondary">Secondary Button</button>
     </div>
 
     <div class="container py-4 px-3 mx-auto">
         <h2 class="heading">Grid System</h2>
-
+        <div class="border border-warning bg-warning bg-opacity-10 container text-center">
+            <h4>Grid System Hierarchy</h4>
+            <strong>Container - Row - Column</strong>
+        </div>
+        <p>
+            <ul>
+                <li>Grid System (a.k.a, <i>Twelve-Column Grid System</i>) is based on containing 12 columns within the Grid (<i>parent container</i>).</li>
+                <li><b>Each column in the Grid occupies exactly 25% of the <i>parent container</i></b>.</li>
+                <li>In the below example, column class <code>.col-sm-4</code> implies <em>column occupies 4 of 12 columns</em></li>
+                <li>Column class <code>.col-sm-4</code> also further implies responsive layout based on <code>sm</code> breakpoint</li>
+            </ul>
+        </p>
+        <p>
+            Grid System supports and responds to <code>Breakpoints</code>
+            <ul>
+                <li>Grid System classes can be defined with <code>Breakpoints</code> as <code>.col-{breakpoint}-{col-width}</code>.</li>
+                <li>Container and columns size themselves as per the <code>min-width</code> restrictions applied.</li>
+                <li>Columns on default class, <code>.col</code>, would elongate the content.</li>
+                <li>Columns on defined class, <code>.col-sm-4</code> would occupy the exact space (4 of 12 columns & 25% of <i>parent container</i>)</li>
+                <li>On reaching their respective <code>Breakpoint</code>, switch the column from vertical to horizontal position.</li>
+            </ul>
+        </p>
+        <p>
+            Columns can be defined to have variable-width or equal-width. For example:
+            <div class="border border-info-subtle container text-center">
+                <div class="row">
+                    <div class="col">Default column</div>
+                    <div class="col-6">Column of 6-columns width</div>
+                    <div class="col">Default column</div>
+                </div>
+            </div>
+        </p>
+        <p>
+            Only default container class, <code>.container</code> has access to customisation of:
+            <ul>
+                <li><b>Gutter</b> - spaces in between columns</li>
+                <li><b>Nesting</b> - nest columns inside a column</li>
+                <li><b>Column order</b></li>
+            </ul>
+        </p>
     </div>
-    <div class="container-sm">
+<!--EXAMPLES-->
+    <div class="border border-info container-sm text-center py-4 px-3">
+        <h3>Example 1 - Flexbox Grid</h3>
         <div class="row">
             <div class="col">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non soluta earum ipsam quisquam eos est saepe, ipsa veritatis numquam, quaerat, autem excepturi eveniet quibusdam suscipit accusamus pariatur. Pariatur, voluptas! Sapiente facilis laborum, molestiae dolor porro facere dolores aperiam, sint quibusdam tenetur provident ratione fuga rerum eum voluptatibus voluptates quas minus.
+                Lorem 10 - <s>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, itaque.</s>
             </div>
-            <div class="col">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non soluta earum ipsam quisquam eos est saepe, ipsa veritatis numquam, quaerat, autem excepturi eveniet quibusdam suscipit accusamus pariatur. Pariatur, voluptas! Sapiente facilis laborum, molestiae dolor porro facere dolores aperiam, sint quibusdam tenetur provident ratione fuga rerum eum voluptatibus voluptates quas minus.
+            <div class="col-sm-4">
+                Lorem 10 - <s>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, itaque.</s>
             </div>
-            <div class="col">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non soluta earum ipsam quisquam eos est saepe, ipsa veritatis numquam, quaerat, autem excepturi eveniet quibusdam suscipit accusamus pariatur. Pariatur, voluptas! Sapiente facilis laborum, molestiae dolor porro facere dolores aperiam, sint quibusdam tenetur provident ratione fuga rerum eum voluptatibus voluptates quas minus.
+            <div class="col-sm-4">
+                Lorem 10 - <s>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, itaque.</s>
             </div>
         </div>
     </div>
+
+    <div class="border border-info container text-center py-4 px-3">
+        <h3>Example 2 - Row Columns</h3>
+        <p>Row Columns - sets specified columns in parent Row class<code>.row row-cols-{breakpoint}-{col-width}</code></p>
+        <div class="row row-cols-sm-4">
+            <div class="col">Lorem 5 - <s>Lorem ipsum dolor sit amet.</s></div>
+            <div class="col">Lorem 5 - <s>Lorem ipsum dolor sit amet.</s></div>
+            <div class="col">Lorem 5 - <s>Lorem ipsum dolor sit amet.</s></div>
+            <div class="col">Lorem 5 - <s>Lorem ipsum dolor sit amet.</s></div>
+        </div>
+    </div>
+
+    <div class="border border-info container text-center py-4 px-3">
+        <h3>Example 3 - Nesting</h3>
+        <div class="row">
+            <div class="border border-info-subtle col-sm-9">
+                <p>This column is <code>.col-sm-9</code></p>
+                <div class="row">
+                    <div class="border border-info-subtle col-4">
+                        <p>This column is <code>.col-4</code></p>
+                    </div>
+                    <div class="border border-info-subtle col-4">
+                        <p>This column is <code>.col-4</code></p>
+                    </div>
+                    <div class="border border-info-subtle col-8">
+                        <p>This column is <code>.col-8</code></p>
+                    </div>
+                </div>
+            </div>
+            <div class="border border-info-subtle col-sm-3">
+                <p>This column is <code>.col-sm-3</code></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="border border-info container-sm text-center py-4 px-3">
+        <h3>Example 4 - Columns Alignment</h3>
+        <div class="border border-info-subtle container">
+            <!--Vertically Centered-->
+            <div class="row align-items-center"> <!--align-items-start/center/end-->
+                <div class="border col-6">Vertical align (<code>.items-align-center</code>)</div>
+                <div class="border col-6">Vertical align (<code>.items-align-center</code>)</div>
+            </div>
+        </div>
+        <div class="border border-info-subtle container">
+            <!--Horizontally ordered-->
+            <div class="row"> <!-- align-self-start/center/end-->
+                <div class="border col-6 align-self-start">Horizontal align (<code>.self-align-start</code>)</div>
+                <div class="border col-6 align-self-end">Horizontal align (<code>.self-align-end</code>)</div>
+            </div>
+        </div>
+        <div class="border border-info-subtle container">
+            <div class="row justify-content-around">
+                <div class="border col-4">Justify Content (<code>.justify-content-around</code>)</div>
+                <div class="border col-4">Justify Content (<code>.justify-content-around</code>)</div>
+            </div>
+        </div>
+        <div class="border border-info-subtle container">
+            <div class="row justify-content-between">
+                <div class="border col-4">Justify Content (<code>.justify-content-between</code>)</div>
+                <div class="border col-4">Justify Content (<code>.justify-content-between></code>)</div>
+            </div>
+        </div>
+        <div class="border border-info-subtle container">
+            <div class="row justify-content-evenly">
+                <div class="border col-4">Justify Content (<code>.justify-content-evenly</code>)</div>
+                <div class="border col-4">Justify Content (<code>.justify-content-evenly</code>)</div>
+            </div>
+        </div>
+        <p class="bg-info bg-opacity-10 py-1 px-1">
+            <code>.justify-content-*</code> classes also have <code>start, center, end</code> alignments.
+        </p>
+    </div>
+
+    <div class="border border-info container text-center py-4 px-3">
+        <h3>Example 5 - Breaking Columns to next Row</h3>
+        <div class="row align-items-center"> 
+            <div class="border col-6">Column Above</div>
+            <div class="border col-6">Column Above</div>
+            <!--break columns to next line/row-->
+            <div class="w-100"></div>
+            <div class="border col-6">Column Below</div>
+            <div class="border col-6">Column Below</div>
+        </div>
+    </div>
+
+    <div class="border border-info container text-center py-4 px-3">
+        <h3>Example 6 - Reordering Columns</h3>
+        <div class="row">
+            <div class="border col"> No Order applied </div>
+            <div class="border col order-5"><code>order-5</code> applied, i.e., Order by Visual-Last, DOM-Second</div>
+            <div class="border col order-2"><code>order-2</code> applied, i.e., Order by Visual-same, DOM-Third</div>
+            <div class="border col order-1"><code>order-1</code> applied, i.e., Order by Visual-Second, DOM-Last</div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="border col order-last"><code>order-last</code> applied, i.e., Order by Visual-last, DOM-first</div>
+            <div class="border col">No Order applied, i.e., Order by Visual-default, DOM-second</div>
+            <div class="border col order-first"><code>order-first</code> applied, i.e., Order by Visual-first, DOM-last</div>
+        </div>
+    </div>
+
+    <div class="border border-info bg-info bg-opacity-10 container text-center py-4 px-3">
+        <p>Offset classes, <code>.offset-{breakpoint}-{col-width}</code>, used to space sibling columns apart by specified col-width.</p>
+        <p><a href="https://getbootstrap.com/docs/5.3/layout/columns/#margin-utilities">Margin Utility</a> classes, <code>.me-auto</code>, used to force sibling columns away from each other.</p>
+    </div>
+
 </body>
 </html>
