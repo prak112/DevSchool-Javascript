@@ -8,8 +8,8 @@
 
 # Learning Checklist
 1. **Grid System** - backbone of Bootstrap : 
-    - [ ] Understand grid system to create responsive designs. 
-    - [ ] Learn about containers, rows, and columns, and how they work together.
+    - [X] Understand grid system to create responsive designs. 
+    - [X] Learn about containers, rows, and columns, and how they work together.
 
 
 2. **Components** : 
