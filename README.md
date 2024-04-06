@@ -3,13 +3,13 @@
 
 ## ReactJS Fundamental
 - [X] Project setup in local env
-- [ ] JSX syntax
-- [ ] Creating Components, Rendering Components, Props
-- [ ] State, setState, Class Components vs Functional Components
+- [X] JSX syntax
+- [X] Creating Components, Rendering Components, Props
+- [X] State, setState, Class Components vs Functional Components
 - [ ] componentDidMount, componentDidUpdate, componentWillUnmount
-- [ ] Handling Events, Synthetic Events in React
+- [X] Handling Events, Synthetic Events in React
 - [ ] Conditional Rendering using if statements and ternary operators
-- [ ] Rendering Lists, Keys in React
+- [X] Rendering Lists, Keys in React
 
 
 # Resources
