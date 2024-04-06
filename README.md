@@ -25,7 +25,7 @@
     - [Algorithms practice](https://github.com/prak112/DevSchool-Javascript/tree/practice-problems/algorithms_practice) - based on [Top 10 Algorithms by fCC](https://youtu.be/ufBbWIyKY2E?si=UquSOoJ9zXHaU4Br)
     - Clearing confusions - [`for...in` Vs `for...of`](https://github.com/prak112/DevSchool-Javascript/tree/practice-problems/for-in_V_for-of) 
 
-## JavaScript Frameworks practice
+## JavaScript Libraries/Frameworks practice
 - ReactJS 
     - [mini-project](https://github.com/prak112/DevSchool-Javascript/tree/react-js) - based on [React Documentation](https://react.dev/learn)
 - Bootstrap
