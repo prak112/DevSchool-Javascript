@@ -71,7 +71,7 @@ export default function Game(){
 
   function handlePlay(nextSquares) {
     // include history until currentMove
-    const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];  // '...history' enumerates all the items in the 'history' including 'nextSquares'
+    const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];  // '...history' enumerates all the items in the 'history' and includes 'nextSquares'
     setHistory(nextHistory);  
     setCurrentMove(nextHistory.length - 1);
   }
