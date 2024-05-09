@@ -1,17 +1,14 @@
 # Table of Contents
 - [Agenda](#agenda)
-- [Resources](#resources)
+- [Curriculum](#curriculum-layout)
 - [Progress](#progress)
-    - [Fundamentals practice](#fundamentals-practice)
-    - [Libraries/Frameworks practice](#librariesframeworks-practice)
+    - [Fundamentals](#fundamentals)
+    - [Libraries/Frameworks](#librariesframeworks)
     - [Practice Project](#practice-project)
-- [Current Focus](#current-focus)
-- [Future Focus](#future-focus)
-- [Course Project - TBD](#course-project---tbd)
-    - [Technology Requirements](#technology-requirements)
-    - [Overview](#overview)
+- [Course Project - Ecommerce](#course-project---ecommerce)
 - [Learning Plan](#learning-plan)
 - [Credits](#credits)
+- [**Reasons to Repeat Project**](#reasons-to-repeat-project)
 
 <br>
 <hr><hr>
@@ -19,10 +16,39 @@
 # Agenda
  - Learn Fundamentals of JavaScript, React JS, Redux, React Native
  - Learn Advanced concepts in JavaScript
- - Implement [Course Project](#course-project---tbd)
+ - Implement [Course Project](#course-project---ecommerce)
+ - Check [Learning Plan](#learning-plan) for details
+
+<br>
+<hr>
+
+# Curriculum Layout
+## Learning
+```mermaid
+graph TD
+A[FUNDAMENTALS] -->Conditionals & Loops & Arrays & Objects & DocumentObjectModel
+
+B[ADVANCED CONCEPTS] --> Closures & Hoisting & AsynchronousJavaScript 
+```
+<br>
+
+## Project
+```mermaid
+graph TD
+FW[FRAMEWORKS] --Components, States-->D[React]
+FW --State Management-->E[Redux]
+FW --Backend-->EX[NodeJS, Express]
+FW --Database-ODM-->MN[MongoDB-mongoose]
+FW --Mobile App Frontend-->F[ReactNative]
+FW --Mobile App Admin-->G[Blazor]
+CP[COURSE PROJECT] --Mobile App and Web App--> EC[Ecommerce]
+```
+- Learning *React JS* & *Redux* fundamentals would provide advantage in smooothening the learning curve with *React Native*
+
  - Check [Learning Plan](#learning-plan) for details
 
 ## Resources
+- [Full Stack open](https://fullstackopen.com/en/) - Open University course for MERN stack
 - [CS50 Web Programming (CS50 W)](https://youtube.com/playlist?list=PLhQjrBD2T380xvFSUmToMMzERZ3qB5Ueu&si=fESzUI9mLIPKQBlQ) - YouTube playlist
 - [freeCodeCamp](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/) - Learning through building projects
 
@@ -32,6 +58,8 @@
 <hr>
 
 # Progress
+- Currently unraveling MERN stack with FullStack open - see [Repository](https://github.com/prak112/fullstack-open-core)
+
 - See [Notes](NOTES.md)
 
 ## Fundamentals 
@@ -61,39 +89,21 @@ with basic functionality to understand :
 
 <br>
 
-[Back To Progress](#progress)
+[Back To Curriculum](#curriculum-layout)
 <br>
 <hr>
 <hr>
 
-# Focus Areas
-## Learning
-```mermaid
-graph TD
-A[FUNDAMENTALS] -->Conditionals & Loops & Arrays & Objects & DocumentObjectModel
 
-B[ADVANCED CONCEPTS] --> Closures & Hoisting & AsynchronousJavaScript 
-```
-<br>
+# Course Project - Ecommerce
+- <details>
+    <summary>Project Options</summary> 
 
-## Project
-```mermaid
-graph TD
-C[FRAMEWORKS] --Components, States-->D[React]
-C --State Management-->E[Redux]
-C --Mobile Development-->F[ReactNative]
-G[COURSE PROJECT] --> TBD
-```
-- Learning *React JS* & *Redux* fundamentals would provide advantage in smooothening the learning curve with *React Native*
+    <ul>
+        <li> Source : <a href="https://www.linkedin.com/feed/update/urn:li:activity:6918166921565614080/">Danny Thompson, LinkedIn post</a>
+        </li>
+    </ul>
 
- - Check [Learning Plan](#learning-plan) for details
-
-
-<br>
-<hr>
-
-# Course Project - TBD
-- To decide between the following :
     1. <details>
         <summary><b>Furniture Ecommerce website</b></summary>
         <p>
@@ -136,51 +146,89 @@ G[COURSE PROJECT] --> TBD
             </ul>
         </p>
        </details>
+</details>
 
-## Technology Requirements
-- Requirements listed from discussions with :
-    -   Teacher (Teemu Turunen), 
-    -   [Bing AI](https://sl.bing.net/dEhXls9KsqO), 
-    -   [Geek4Geeks](https://www.geeksforgeeks.org/introduction-react-native/?ref=lbp)
-- MERN stack with Redux and ReactNative for Mobile App
+- Based on discussions/information from 
+    - Teacher (Teemu Turunen), 
+    - [Geek4Geeks](https://www.geeksforgeeks.org/introduction-react-native/?ref=lbp)
+
 
 ## Overview
-- The mobile application will be a **Hybrid Application** with the following specifications 
+- Web application (45 credits) will be with a responsive design
+- Mobile application (15 credits) will be a **Hybrid Application**
+
+| Ecommerce website | |
+| --- | --- |
+| *Design* | Based on [DevSchool-Project using Django](https://github.com/prak112/DevSchool-Project) |
+| *Functionality* | -same as above- |
+| *Tech Stack* | MERN (*MongoDB-mongoose, Express, React/ReactNative, NodeJS*) |
+| | |
+
+## Mobile Application (15 Credits)
+- After [unraveling MERN stack](https://github.com/prak112/fullstack-open-core#goal) with Full Stack open : 
+    - Parts 0-7, 
+    - Part 9 (*TypeScript*) and 
+    - Part 10 (*ReactNative*)
+- Ecommerce mobile app using **MERN** (*ReactNative*) and *Blazor*<!--prep/check local 15osp README -->
+- Admin page (using Blazor WebAssembly in C# ) <!--prep/check local 15osp README -->
+- ...*WIP*... - Detailed implementation plan
+
+## Web Application (45 Credits)
+- After [unraveling MERN stack core](https://github.com/prak112/fullstack-open-core#goal) with Full Stack open ( Parts 0-7 )
+- Ecommerce website using **MERN**
+- ...*WIP*... - Detailed implementation plan 
+ <!--prep/check local 45osp README -->
+ 
+
+## Technology Requirements
 
 <table style="border: 1px solid; border-collapse: collapse;">
     <tr>
         <th>Hosting Platforms</th>
-        <td>iOS, Android</td>
+        <td>iOS, Android, Web</td>
     </tr>
     <tr>
         <th>Frontend</th>
-        <td>HTML5, Bootstrap5, JavaScript</td>
+        <td>React v18.x, Bootstrap5</td>
     </tr>
     <tr>
         <th>Backend</th>
-        <td>React Native</td>
+        <td>Express v4.x, React Native v0.74, NodeJS v20.x</td>
+    <tr>
+    <tr>
+        <th>Database</th>
+        <td>MongoDB Server v5.2.x, mongoose ODM v8.x</td>
     <tr>
     <tr>
         <th>IDE</th>
         <td>VS Code</td>
     </tr>
     <tr>
-        <th>Testing (<i>extensions</i>)</th>
+        <th>API Testing (<i>extensions</i>)</th>
+        <td>Postman v1.0.1, REST client v0.25.1</td>
+    </tr>
+    <tr>
+        <th>Application Testing (<i>extensions</i>)</th>
         <td>Android Emulator, iOS Simulator or MobileView</td>
     </tr>
     <tr>
-        <th>Debugging (<i>extensions</i>)</th>
-        <td>React Native Debugger</td>
+        <th>Debugging</th>
+        <td>Chrome, VS Code Debugger, React Native Debugger(<i>extension</i>)</td>
     </tr>
 </table>
 
 <br>
+
+[Back To Curriculum](#curriculum-layout)
+<br>
+<hr>
 <hr>
 
 # Learning Plan
-- Currently [unraveling MERN stack](https://github.com/prak112/fullstack-open-core) with FullStack open course from University of Helsinki
-- Learnings from FullStack open will be implemented for Course Projects (*15osp*, *45osp*)
+
+- Learnings from FullStack open will be implemented for Course Projects ([*15 credits*](#15-credits---mern-using-reactnative-and-aspnet), [*45 credits*](#45-credits---mern))
 - Below is an exhaustive list of current learnings and their progress ( [progress details](/NOTES.md) )
+
 
 ## JavaScript Fundamentals
 - [X] Variables, Data Types, Operators, Control Structures (if/else, switch, loops)
@@ -212,7 +260,7 @@ G[COURSE PROJECT] --> TBD
 - [X] Function Composition
 - [X] Immutable Data Structures, Benefits of Immutability
 
-# JavaScript Objects
+## JavaScript Objects
 - [X] Basics
 - [X] Prototypes
 - [X] Prototypal 'Inheritance' (Delegation)
@@ -242,7 +290,7 @@ G[COURSE PROJECT] --> TBD
 
 <br>
 
-[Back To Progress](#progress)
+[Back To Curriculum](#curriculum-layout)
 <br>
 <hr>
 <hr>
@@ -252,5 +300,30 @@ G[COURSE PROJECT] --> TBD
 - Learning Assistance :
     - [![built with Codeium](https://codeium.com/badges/main)](https://codeium.com)
     - **GitHub CoPilot**
+<br>
+<hr>
+<hr>
+<br>
+
+# Reasons to Repeat Project
+- To identify differences and significance between frameworks (**Django**, **MERN**)
+- To be able to visualize stakeholders's needs in different frameworks' perspective
+- More elaborately to :
+1. **Understand Core concepts** and **Versatility**
+    - Web Development is all about agility and adapting, hence to familiarise with syntax and functional pecularities amongst frameworks
+2. **Evaluate Frameworks**
+    - Helps to evaluate strengths and weaknesses of each framework to decide when to use which
+3. **Learn through Mastery**
+    - Repetition leads to reinforced learning and deeper understanding
+4. **Enhance Problem Solving**
+    - Adapting to diverse frameworks while maintaining controlled parameters enhances problem-solving skills.
+5. **Learn Best Practices**
+    - Learn best possible ways to work with each framework
+6. **Boost Confidence**
+    - All of the above combined leads to confidence boosting as a Software Developer!
+<br>
+
+[Back To Curriculum](#curriculum-layout)
+<br>
 <hr>
 <hr>
